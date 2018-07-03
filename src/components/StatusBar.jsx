@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Moment from 'moment';
 
 function StatusBar(props){
+
+  function displayGameStart(gameStart){
+    return gameStart.from(new Moment(), true);
+  }
 
   return(
     <div>
@@ -22,7 +27,7 @@ function StatusBar(props){
 StatusBar.propTypes = {
   hungerLevel: PropTypes.number,
   sleepLevel: PropTypes.number,
-  playLevel: PropTypes.number
+  playLevel: PropTypes.number,
 };
 
 

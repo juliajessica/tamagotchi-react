@@ -5,9 +5,7 @@ import Play from './Play';
 import Sleep from './Sleep';
 import StatusBar from './StatusBar';
 
-
 class App extends React.Component {
-
 
   constructor(props){
     super(props);
@@ -22,6 +20,27 @@ class App extends React.Component {
     this.handlePlay = this.handlePlay.bind(this);
     // this.tamLife = this.tamLife.bind(this);
   }
+
+  componentDidMount(){
+    setInterval(() =>
+      this.changeLevels(), 1000
+    );
+  }
+
+  changeLevels(){
+    let newTamHungerLevel = this.state.tamHunger --;
+    let newTamSleepLevel = this.state.tamSleep --;
+    let newTamPlsyLevel = this.state.tamPlay --;
+
+    this.setState(
+      {newTamHungerLevel: this.state.tamHunger,
+      newTamSleepLevel: this.state.tamSleep,
+      newTamPlayLevel: this.state.tamPlay
+
+      }
+    );
+  }
+
 
   handleSleep(){
     console.log(this.state.tamSleep);
