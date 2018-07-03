@@ -5,9 +5,7 @@ import tam from './../../assets/imgs/tam.gif';
 function Tamagotchi(){
   return(
     <div className={style.greenText}>
-      <h1>Tamagotchi</h1>
-      <img src={tam} className="tamImg"/>
-
+      <img src={tam} className="tamImg" />
 
         <style jsx>{`
           h1 {
@@ -20,7 +18,6 @@ function Tamagotchi(){
 
           }
         `}</style>
-
     </div>
 
   );
