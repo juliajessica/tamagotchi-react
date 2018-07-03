@@ -29,8 +29,8 @@ class App extends React.Component {
 
   changeLevels(){
     let newTamHungerLevel = this.state.tamHunger --;
-    let newTamSleepLevel = this.state.tamSleep --;
-    let newTamPlsyLevel = this.state.tamPlay --;
+    let newTamSleepLevel = this.state.tamSleep -=3;
+    let newTamPlsyLevel = this.state.tamPlay -=6;
 
     this.setState(
       {newTamHungerLevel: this.state.tamHunger,
