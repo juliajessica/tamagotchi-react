@@ -36,8 +36,8 @@ class App extends React.Component {
       {newTamHungerLevel: this.state.tamHunger,
       newTamSleepLevel: this.state.tamSleep,
       newTamPlayLevel: this.state.tamPlay
-
       }
+
     );
   }
 
