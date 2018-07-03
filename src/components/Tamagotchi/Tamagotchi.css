@@ -1,0 +1,8 @@
+.greenText {
+  color: green;
+}
+.greenText:hover {
+  background-color: #a9ba86;
+  opacity: 0.5;
+  color: white;
+}
