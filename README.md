@@ -1,6 +1,6 @@
-# _<p align="center">React Template</p>_
+# _<p align="center">Tamagotchi</p>_
 
-#### _**<p align="center">By: Julia Sheremet</p>**_
+#### _**<p align="center">By: Julia Sheremet & Jessica Schmitz</p>**_
 
 <p align="center">  
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
@@ -77,7 +77,7 @@ $ npm run start
 
 ### <span style="color:#74875d;">License</span>
 
-Copyright (c) 2018 ****_Julia Sheremet_****
+Copyright (c) 2018 ****_Julia Sheremet & Jessica Schmitz_****
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
