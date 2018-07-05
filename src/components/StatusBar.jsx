@@ -1,23 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Moment from 'moment';
+// import Moment from 'moment';
 
 function StatusBar(props){
 
-  function displayGameStart(gameStart){
-    return gameStart.from(new Moment(), true);
-  }
+  // function displayGameStart(gameStart){
+  //   return gameStart.from(new Moment(), true);
+  // }
 
   return(
-    <div>
-      <p>Hunger Level: {props.hungerLevel}</p>
-      <p>Sleep Level: {props.sleepLevel}</p>
-      <p>Play Level: {props.playLevel}</p>
+    <div className="flexStatusBar">
+      <p><strong>Hunger Level:</strong> {props.hungerLevel}</p>
+      <p><strong>Play Level:</strong> {props.playLevel}</p>
+      <p><strong>Sleep Level:</strong> {props.sleepLevel}</p>
 
 
 
       <style jsx>{`
-           {
+          .flexStatusBar{
+            display:flex;
+            justify-content: space-around;
+            flex-direction: row;
           }
         `}</style>
     </div>
