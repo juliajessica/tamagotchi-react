@@ -21,6 +21,10 @@ function StatusBar(props){
             display:flex;
             justify-content: space-around;
             flex-direction: row;
+            margin-top: 80px;
+          }
+          p{
+            color: #7D92B2;
           }
         `}</style>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Tamagotchi from './Tamagotchi/Tamagotchi';
 import StatusBar from './StatusBar';
 import Dead from './Dead';
+import tam from '../assets/imgs/tam.gif';
 
 class App extends React.Component {
 
@@ -56,7 +57,7 @@ class App extends React.Component {
 
   decrementLevels(){
     console.log('click');
-    if (this.state.tamHunger === 90 || this.state.tamSleep === 90 || this.state.tamPlay === 90) {
+    if (this.state.tamHunger === 70 || this.state.tamSleep === 70 || this.state.tamPlay === 70) {
       this.setState({
         tamHunger: 0,
         tamSleep: 0,
@@ -100,11 +101,116 @@ class App extends React.Component {
     }
     return (
       <div>
-        <h1>Tamagotchi</h1>
-        <h1></h1>
-
+        <h1 className="jello">Tamagotchi</h1>
+        <img src={tam} className="tamImg" />
         {gameOver}
 
+        <style jsx>{`
+          h1 {
+            display:flex;
+            justify-content: center;
+            color: #C1E1A9;
+            font-size: 4rem;
+            -webkit-animation-name: jello;
+            animation-name: jello;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+          -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+          }
+          .tamImg{
+            display: block;
+            margin:auto;
+
+          }
+          @-webkit-keyframes jello {
+            from,
+            11.1%,
+            to {
+              -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+            }
+
+            22.2% {
+              -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+              transform: skewX(-12.5deg) skewY(-12.5deg);
+            }
+
+            33.3% {
+              -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+              transform: skewX(6.25deg) skewY(6.25deg);
+            }
+
+            44.4% {
+              -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+              transform: skewX(-3.125deg) skewY(-3.125deg);
+            }
+
+            55.5% {
+              -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+              transform: skewX(1.5625deg) skewY(1.5625deg);
+            }
+
+            66.6% {
+              -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+              transform: skewX(-0.78125deg) skewY(-0.78125deg);
+            }
+
+            77.7% {
+              -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+              transform: skewX(0.390625deg) skewY(0.390625deg);
+            }
+
+            88.8% {
+              -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+              transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+            }
+            }
+
+            @keyframes jello {
+            from,
+            11.1%,
+            to {
+              -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+            }
+
+            22.2% {
+              -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+              transform: skewX(-12.5deg) skewY(-12.5deg);
+            }
+
+            33.3% {
+              -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+              transform: skewX(6.25deg) skewY(6.25deg);
+            }
+
+            44.4% {
+              -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+              transform: skewX(-3.125deg) skewY(-3.125deg);
+            }
+
+            55.5% {
+              -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+              transform: skewX(1.5625deg) skewY(1.5625deg);
+            }
+
+            66.6% {
+              -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+              transform: skewX(-0.78125deg) skewY(-0.78125deg);
+            }
+
+            77.7% {
+              -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+              transform: skewX(0.390625deg) skewY(0.390625deg);
+            }
+
+            88.8% {
+              -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+              transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+            }
+          }
+        `}</style>
       </div>
     );
   }
