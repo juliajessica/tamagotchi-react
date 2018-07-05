@@ -1,11 +1,15 @@
 import React from 'react';
 import style from './Tamagotchi.css';
 import tam from './../../assets/imgs/tam.gif';
+import PropTypes from 'prop-types';
 
-function Tamagotchi(){
+function Tamagotchi(props){
   return(
     <div className={style.greenText}>
       <img src={tam} className="tamImg" />
+        <button onClick={props.onHunger}>Feed</button>
+        <button onClick={props.onPlay}>Play</button>
+        <button onClick={props.onSleep}>Sleep</button>
 
         <style jsx>{`
           h1 {
@@ -22,5 +26,11 @@ function Tamagotchi(){
 
   );
 }
+
+Tamagotchi.propTypes ={
+  onHunger: PropTypes.func,
+  onPlay: PropTypes.func,
+  onSleep: PropTypes.func
+};
 
 export default Tamagotchi;

@@ -1,9 +1,7 @@
 import React from 'react';
 import Tamagotchi from './Tamagotchi/Tamagotchi';
-// import Feed from './Feed';
-// import Play from './Play';
-// import Sleep from './Sleep';
 import StatusBar from './StatusBar';
+import Dead from './Dead';
 
 class App extends React.Component {
 
@@ -18,7 +16,6 @@ class App extends React.Component {
     this.handleHunger = this.handleHunger.bind(this);
     this.handleSleep = this.handleSleep.bind(this);
     this.handlePlay = this.handlePlay.bind(this);
-    // this.tamLife = this.tamLife.bind(this);
   }
 
   componentDidMount(){
@@ -59,11 +56,12 @@ class App extends React.Component {
 
   decrementLevels(){
     console.log('click');
-    if (this.state.tamHunger === 70 || this.state.tamSleep === 70 || this.state.tamPlay === 70) {
+    if (this.state.tamHunger === 90 || this.state.tamSleep === 90 || this.state.tamPlay === 90) {
       this.setState({
         tamHunger: 0,
         tamSleep: 0,
-        tamPlay: 0
+        tamPlay: 0,
+        tamLife: true
       });
     } else if (this.state.tamHunger !== 0 || this.state.tamSleep !== 0 || this.state.tamPlay !==0) {
       let newStateHunger = this.state.tamHunger;
@@ -82,43 +80,34 @@ class App extends React.Component {
   }
 
 
-
-
   render(){
-    return (
+    let gameOver = null;
+    if(this.state.tamLife){
+      gameOver = <Dead />
+    } else {
+      gameOver =
       <div>
-        <h1>Tamagotchi</h1>
-        <h1></h1>
-        <Tamagotchi />
-        <button onClick={this.handleHunger}>Feed</button>
-        <button onClick={this.handlePlay}>Play</button>
-        <button onClick={this.handleSleep}>Sleep</button>
         <StatusBar
           hungerLevel={this.state.tamHunger}
           playLevel={this.state.tamPlay}
           sleepLevel={this.state.tamSleep}
-          />
+        />
+        <Tamagotchi
+          onHunger={this.handleHunger}
+          onSleep={this.handleSleep}
+          onPlay={this.handlePlay} />
+      </div>
+    }
+    return (
+      <div>
+        <h1>Tamagotchi</h1>
+        <h1></h1>
+
+        {gameOver}
+
       </div>
     );
   }
 }
 
 export default App;
-
-// let newTamSleepLevel = this.state.tamSleep -=3;
-// let newTamPlayLevel = this.state.tamPlay -=6;
-
-
-// alert when the tamagotchi dies
-//
-// const tamLife = (this.state.tamHunger <1 || this.state.tamPlay <1 || this.state.tamSleep <1) ? true : this.setState({tamLife: checkTamLife}));
-//
-//
-// let checkTamLife = this.state.tamLife;
-//
-// if (this.state.tamHunger <1 || this.state.tamPlay <1 || this.state.tamSleep <1){
-//   newCheckTamLife = 'Tamagotchi is dead';
-// } else {
-//   newCheckTamLife = 'Keep going';
-// }
-//
