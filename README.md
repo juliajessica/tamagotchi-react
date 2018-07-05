@@ -16,7 +16,7 @@ A React take on a classic 90's digital pet game. Play, feed, and let your Tamago
 ### Link to live application:
 
 https://jessicaleighschmitz.github.io/tamagotchi-react/ or
-https://github.com/epicodus-lessons/redux_karaoke_blank.git
+https://juliajessica.github.io/tamagotchi-react/#/
 
 ### Setup/Installation Requirement
 Clone repository on your local computer.
