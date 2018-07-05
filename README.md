@@ -9,9 +9,14 @@
 
 ## <span style="color:#74875d;">Description</span>
 
+A React take on a classic 90's digital pet game. Play, feed, and let your Tamagotchi sleep!
+
+![Application ScreenShot](./src/assets/imgs/tama.png)
+
 ### Link to live application:
 
-_This is a template repository with the added technologies to build a React Application quicker for projects_
+https://jessicaleighschmitz.github.io/tamagotchi-react/ or
+https://julisjessica.github.io/tamagotchi-react/
 
 ### Setup/Installation Requirement
 Clone repository on your local computer.
